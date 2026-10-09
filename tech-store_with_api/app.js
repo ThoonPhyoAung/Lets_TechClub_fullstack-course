@@ -22,6 +22,9 @@ function showLoading(container) {
 
 // Fetch Products from FakeStore API using Axios
 async function fetchAllSections() {
+  showLoading(featuredContainer);
+  showLoading(newArrivalsContainer);
+  showLoading(bestSellersContainer);
   try {
     const response = await axios.get(ALL_PRODUCTS_URL);
     const allProducts = response.data;
