@@ -50,16 +50,11 @@
           href="/"
           class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none"
         >
-          <lord-icon
-            class="me-1"
-            src="https://cdn.lordicon.com/fmsilsqx.json"
-            trigger="loop"
-            delay="2000"
-            colors="primary:#fe624b"
-            style="width: 50px; height: 40px"
-          >
-          </lord-icon>
-          <!-- Brand Name ကို Tech/Electronics နှင့် ကိုက်ညီအောင် ပြင်ခြင်း -->
+          <i
+            style="color: #fe624b"
+            class="fa-solid fa-cart-shopping me-1 fs-5"
+          ></i>
+
           <span class="fs-4 fw-bold"
             >Tech <span style="color: #fe624b">Store</span></span
           >
@@ -436,7 +431,12 @@
       <div
         id="featured-products-container"
         class="d-flex flex-nowrap overflow-x-auto gap-4 custom-scrollbar py-2"
-      ></div>
+      >
+        <div class="text-center w-100 py-4">
+          <div class="spinner-border text-danger" role="status"></div>
+          <p class="mt-2 text-muted small">Loading products...</p>
+        </div>
+      </div>
     </div>
 
     <!-- new arrivals section -->
@@ -451,7 +451,12 @@
       <div
         id="new-arrivals-container"
         class="d-flex flex-nowrap overflow-x-auto gap-4 custom-scrollbar py-2"
-      ></div>
+      >
+        <div class="text-center w-100 py-4">
+          <div class="spinner-border text-danger" role="status"></div>
+          <p class="mt-2 text-muted small">Loading products...</p>
+        </div>
+      </div>
     </div>
 
     <!-- best sellers section -->
@@ -467,7 +472,12 @@
       <div
         id="best-sellers-container"
         class="d-flex flex-nowrap overflow-x-auto gap-4 custom-scrollbar py-2"
-      ></div>
+      >
+        <div class="text-center w-100 py-4">
+          <div class="spinner-border text-danger" role="status"></div>
+          <p class="mt-2 text-muted small">Loading products...</p>
+        </div>
+      </div>
     </div>
 
     <!-- brands section -->
