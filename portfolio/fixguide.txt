@@ -1,0 +1,309 @@
+ကောင်းပါပြီ! မင်းရဲ့ Project folder ထဲမှာ .txt file အနေနဲ့ သိမ်းထားပြီး
+တစ်ပိုင်းချင်း ကိုယ်တိုင်ရေး/စစ်သွားနိုင်အောင် Part 1 ကနေ Part 7 (Final Part)
+အထိ Line-by-Line Guide + Verification Checklist အပြည့်အစုံကို တစ်စုတစ်စည်းတည်း
+စီစဉ်ပေးလိုက်ပါတယ်။
+
+================================================================================
+PORTFOLIO PROJECT — STEP-BY-STEP MENTOR STUDY & QA GUIDE (PART 1 TO PART 7)
+Project: Thoon Phyo Aung (@Ranejipsy) | Pure HTML + Pure CSS + Vanilla JS
+================================================================================
+
+PART 1: Global Setup & Theme System (Light / Dark Mode)
+
+၁။ HTML (index.html)
+
+  - <html lang="en" data-theme="light">: JS မ run ခင်ကတည်းက Light Mode ကို
+    Default ဖြစ်နေစေဖို့နဲ့ Flash မဖြစ်အောင် ထည့်ထားပါတယ်။
+  - <meta name="viewport" content="width=device-width, initial-scale=1.0" />:
+    ဖုန်း (360px) နဲ့ Tablet (768px) တွေမှာ Responsive မှန်မှန်ကန်ကန် ပြဖို့
+    မဖြစ်မနေ လိုပါတယ်။
+  - <script src="js/main.js" defer></script>: HTML တွေ အရင်ဖတ်ပြီးမှ JS ကို run
+    ခိုင်းတာမို့ DOM element မတွေ့တဲ့ Error ကို ကာကွယ်ပေးပါတယ်။
+  - <a class="skip-link" href="#main-content">: Keyboard (Tab) သုံးသူတွေ Navbar
+    ကိုကျော်ပြီး Main content ဆီ တန်းခုန်နိုင်အောင် ထည့်ထားပါတယ်။
+
+၂။ CSS (css/style.css)
+
+  - :root, [data-theme="light"] & [data-theme="dark"]: CSS Variables (--bg-page,
+    --text-primary, --accent) တွေ ခွဲထားခြင်းဖြင့် data-theme ပြောင်းလိုက်တာနဲ့
+    တစ်မျက်နှာလုံး အရောင်အလိုအလျောက် ပြောင်းစေပါတယ်။
+  - *, *::before, *::after { box-sizing: border-box; }: Padding နဲ့ Border
+    ကြောင့် Box width ကျော်ထွက်ပြီး Horizontal scroll မဖြစ်အောင် ထိန်းပေးပါတယ်။
+  - html { scroll-behavior: smooth; scroll-padding-top: 6rem; }: Smooth scroll
+    ဖြစ်စေပြီး Sticky Navbar အောက်မှာ Section title မဖုံးသွားအောင် 6rem
+    နေရာချန်ပေးပါတယ်။
+  - [hidden] { display: none !important; }: HTML hidden attribute ပါတဲ့ element
+    တွေကို CSS flex/grid တွေက မကျော်နိုင်အောင် သေချာဖျောက်ပေးပါတယ်။
+  - :focus-visible: Keyboard Tab နဲ့ ရွှေ့တဲ့အခါမှ Focus outline ပေါ်စေပါတယ်။
+
+၃။ JS (js/main.js)
+
+  - "use strict";: Variable ကြေညာဖို့ မေ့တာမျိုးလို Beginner အမှားတွေကို
+    ကာကွယ်ပေးပါတယ်။
+  - getSavedTheme() & saveTheme() + try/catch: Browser Private mode (သို့)
+    Storage ပိတ်ထားချိန် Script crash မဖြစ်အောင် try/catch ခံထားပြီး Empty
+    ဖြစ်နေရင် "light" ကို Default ပြန်ပေးပါတယ်။
+  - initThemeSwitcher(): data-theme, aria-pressed, aria-label, Icon (🌙/☀️),
+    Label (Dark/Light) တွေကို Sync လုပ်ပေးပါတယ်။
+
+Part 1 စစ်ဆေးရန် Checklist:
+
+- [ ] DevTools -> Application -> Local Storage ရှင်းပြီး Refresh လုပ်ရင် Light
+  Mode ပဲ ဖြစ်နေရမယ်။
+- [ ] Dark နှိပ်ပြီး Refresh (F5) လုပ်ရင် Dark Mode အတိုင်း မှတ်မိနေရမယ်။
+- [ ] aria-pressed က "false" <-> "true" ပြောင်းနေရမယ်။
+- [ ] Page ထိပ်မှာ Tab တစ်ချက်နှိပ်ရင် "Skip to main content" ပေါ်လာရမယ်။
+- [ ] Console မှာ Error 0 ဖြစ်ရမယ်။
+
+PART 2: Floating Glass Pill Navbar & Accessible Mobile Menu
+
+၁။ HTML (index.html)
+
+  - .site-header > .container > .nav-pill: Navbar ကို မျက်နှာပြင်အပြည့်မကပ်ဘဲ
+    Floating pill ပုံစံ ဖွဲ့စည်းထားပါတယ်။
+  - .desktop-nav: Desktop (>= 768px) မှာပြမယ့် Navigation links (About, Skills,
+    What I Do, Projects, Contact)။
+  - #menu-toggle: aria-expanded="false" နဲ့ aria-controls="mobile-menu" ပါပြီး
+    Screen reader တွေကို ဘယ် menu ကို ထိန်းချုပ်နေလဲ ပြောပြထားပါတယ်။
+  - #mobile-menu: စစချင်းမှာ hidden attribute ထည့်ထားပါတယ်။
+
+၂။ CSS (css/style.css)
+
+  - .site-header: position: sticky; top: 1rem; z-index: 100; pointer-events:
+    none; (Pill အပြင်ဘက် ဘေးနေရာလွတ်တွေကို နှိပ်ရင် Page content ကို
+    နှိပ်လို့ရနေအောင် pointer-events: none ထားပြီး .nav-pill နဲ့ .mobile-nav ကို
+    pointer-events: auto ပြန်ပေးထားပါတယ်)။
+  - .nav-pill: border-radius: 9999px;, background-color: var(--nav-pill-bg);
+    (rgba(255, 255, 255, 0.25)), backdrop-filter: blur(10px); (အဖြူပေါ်မှာ အဖြူ၊
+    အရောင်/Dark ပေါ်မှာ #869DA4 မှန်ကြည်လို မြင်ရစေတဲ့ Sister-style glass
+    effect)။
+  - @media (min-width: 768px): Desktop ရောက်တာနဲ့ .desktop-nav ကို ပြပြီး
+    .menu-btn နဲ့ .mobile-nav ကို ဖျောက်ပေးပါတယ်။
+
+၃။ JS (js/main.js)
+
+  - setMenuState(isOpen): mobileMenu.hidden = !isOpen, aria-expanded,
+    aria-label, Icon (☰/✕) ကို တစ်နေရာတည်းက ထိန်းချုပ်ပါတယ်။
+  - Link Click Close: Mobile nav link တစ်ခုနှိပ်ပြီး Scroll ဆင်းတာနဲ့ Menu
+    အလိုအလျောက် ပြန်ပိတ်ပေးပါတယ်။
+  - Escape Key Close: Escape နှိပ်ရင် Menu ပိတ်ပြီး Focus ကို #menu-toggle ဆီ
+    ပြန်ပို့ပေးပါတယ်။
+  - Resize Reset: Window ကို >= 768px အထိ ချဲ့လိုက်ရင် Mobile menu
+    ပွင့်ကျန်မနေအောင် ပြန်ပိတ်ပေးပါတယ်။
+
+Part 2 စစ်ဆေးရန် Checklist:
+
+- [ ] 360px screen မှာ <Ranejipsy/>, 🌙 Dark, ☰ တစ်တန်းတည်း ကျကျနန ဆန့်ရမယ်
+  (Horizontal scroll မရှိရ)။
+- [ ] Mobile menu ပိတ်ထားချိန် Tab နှိပ်ရင် ပိတ်ထားတဲ့ Mobile links ထဲ Focus
+  မဝင်ရပါ (URL jump မလုပ်ရ)။
+- [ ] Menu ဖွင့်ပြီး Escape နှိပ်ရင် ပိတ်ပြီး Focus က ☰ button ဆီ ပြန်ရောက်ရမယ်။
+- [ ] Link နှိပ်ရင် Menu ပိတ်ပြီး Section title ကို Navbar မဖုံးဘဲ
+  ရောက်သွားရမယ်။
+
+PART 3: Hero & About Me Sections
+
+၁။ HTML (index.html)
+
+  - #hero:
+      - .hero-greeting (Hi, I'm Thoon Phyo Aung)
+      - <h1 class="hero-highlight-box">: Sister UX အတိုင်း Highlighted bold
+        intro statement (Page တစ်ခုလုံးမှာ <h1> တစ်ခုတည်း ထားခြင်း)။
+      - .hero-cta: Rounded pill ခလုတ် ၂ ခု (View My Projects, Contact Me)။
+      - .hero-visual: .avatar-ring + assets/avatar.png + .floating-badge ၂ ခု
+        (Hero metrics တွေ ဖြုတ်ထားပြီးသား)။
+  - #about:
+      - .polaroid-card: assets/avatar.png + နာမည် + Role caption။
+      - .about-story: CV အမှန်အချက်အလက်များသာ (Self-taught since 2021, DET
+        English: 100, High School 2023, Django & React training Aug 2026)။
+      - .about-socials: GitHub, LinkedIn, Email (mailto:) icon ခလုတ်များ။
+
+၂။ CSS (css/style.css)
+
+  - .hero-grid & .about-split: Mobile မှာ 1 column ဖြစ်ပြီး Desktop (>= 768px /
+    >= 1024px) မှာ 2 columns ဖြစ်အောင် CSS Grid သုံးထားပါတယ်။
+  - .avatar-img & .polaroid-frame img: object-fit: cover; object-position: top
+    center; သုံးထားလို့ ပုံပုံစံ မပြားသွားဘဲ မျက်နှာအပေါ်ပိုင်းကို အလယ်တည့်တည့်
+    ပြပေးပါတယ်။
+
+Part 3 စစ်ဆေးရန် Checklist:
+
+- [ ] assets/avatar.png ဖိုင် folder ထဲမှာ ရှိပြီး Broken image icon မပေါ်ရပါ။
+- [ ] thoonphyoaung.dev@gmail.com နေရာတိုင်း (About social, Contact section,
+  Footer) မှာ မင်းရဲ့ Real email နဲ့ အစားထိုးပြီးသား ဖြစ်ရမယ်။
+- [ ] Fake work experience / community / blog တွေ လုံးဝ မပါရပါ။
+
+PART 4: Technical Skills & "What I Do" Sections
+
+၁။ HTML (index.html)
+
+  - #skills:
+      - .skills-legend: Core vs Still Learning အဓိပ္ပာယ် ရှင်းပြထားပါတယ်။
+      - 4 Category Cards (Web Development, Embedded & IoT, Hardware &
+        Fundamentals, Tools & Workflow)။
+      - Card တိုင်းမှာ ကိုယ်တိုင်သင်ယူနေဆဲ skill တွေကို <span class="badge
+        badge-learning">Still Learning</span> နဲ့ အတိအလင်း ဖော်ပြထားပါတယ်
+        (Assignment rule)။
+  - #what-i-do:
+      - Sister UX အတိုင်း 3 Horizontal Tinted Strips (pillar-teal, pillar-cyan,
+        pillar-mint)။
+
+၂။ CSS (css/style.css)
+
+  - .skills-grid: Mobile မှာ 1 col -> >= 768px မှာ 2 cols (2x2 grid)။
+  - .badge-core & .badge-learning: Light Mode ရော Dark Mode မှာပါ
+    စာသားဖတ်ရလွယ်အောင် Contrast color တွေ သီးသန့် ညှိပေးထားပါတယ်။
+  - .pillars-stack: max-width: 920px; margin: 0 auto; နဲ့ အလယ်မှာ သပ်သပ်ရပ်ရပ်
+    စီထားပါတယ်။
+
+Part 4 စစ်ဆေးရန် Checklist:
+
+- [ ] "Still Learning" badge တွေကို မြင်သာအောင် ထည့်ထားပြီး ကိုယ်တိုင်တကယ်
+  ရှင်းပြနိုင်တဲ့ skill တွေပဲ ဖြစ်ရမယ်။
+- [ ] Light Mode နဲ့ Dark Mode နှစ်ခုလုံးမှာ Strip ၃ ခုနဲ့ Badge စာသားတွေ
+  ကြည်ကြည်လင်လင် ဖတ်လို့ရရမယ်။
+
+PART 5: Data-Driven Projects & Category Filters
+
+၁။ HTML (index.html)
+
+  - #filter-buttons: All, Web Apps, Embedded IoT ခလုတ် ၃ ခု (role="group",
+    data-filter, aria-pressed)။
+  - #projects-count: aria-live="polite" ပါတာကြောင့် Filter ပြောင်းတိုင်း Screen
+    reader တွေက အရေအတွက်အသစ်ကို ဖတ်ပြနိုင်ပါတယ်။
+  - #projects-grid: JS က Card တွေ လာထည့်မယ့် Container (JS ပိတ်ထားသူတွေအတွက်
+    <noscript> fallback ပါဝင်)။
+
+၂။ CSS (css/style.css)
+
+  - .projects-grid: Mobile 1 col -> Tablet/Desktop 2 cols (4 cards မို့ 2x2
+    ညီညီညာညာ ပေါ်ပါတယ်)။
+  - .project-card: display: flex; flex-direction: column; + .project-footer {
+    margin-top: auto; } ကြောင့် စာအရှည်မတူရင်တောင် အောက်ခြေခလုတ်တန်းတွေ
+    တစ်ညီတည်း ဖြစ်နေပါမယ်။
+
+၃။ JS (js/main.js)
+
+  - projects array: Category ၂ ခု (Web Apps, Embedded IoT) ထဲက Real projects 4
+    ခု။
+  - createProjectCard(project): innerHTML အစား document.createElement() +
+    .textContent သုံးထားလို့ XSS-safe ဖြစ်ပြီး Structure ရှင်းပါတယ်။
+  - renderProjects(selectedCategory):
+      - DocumentFragment ထဲမှာ card တွေအရင်စုပြီး
+        projectsGrid.replaceChildren(fragment) နဲ့ အစားထိုးတာကြောင့် Duplicate
+        cards လုံးဝ မဖြစ်ပါဘူး။
+      - filterButtons click event မှာ is-active class နဲ့ aria-pressed ကို
+        update လုပ်ပေးပါတယ်။
+
+Part 5 စစ်ဆေးရန် Checklist:
+
+- [ ] All -> 4 projects, Web Apps -> 2 projects, Embedded IoT -> 2 projects
+  ပြရမယ်။
+- [ ] Filter ခလုတ်တွေကို အကြိမ်ကြိမ်နှိပ်ကြည့်ပါ -> Card တွေ ပွားမလာရပါ (No
+  duplicates)။
+- [ ] Keyboard (Tab + Enter / Space) နဲ့ Filter ခလုတ်တွေကို နှိပ်စမ်းကြည့်ပါ။
+- [ ] Project link တွေ (GitHub + MakerHub Vercel) အားလုံး ဖွင့်ကြည့်ပြီး Link
+  မှန်/မမှန် စစ်ပါ။
+
+PART 6: Contact Info, Validated Demo Form & Footer
+
+၁။ HTML (index.html)
+
+  - #contact:
+      - .contact-rows: Clean divider rows (Real mailto: link, GitHub, LinkedIn,
+        Location) + Demo ဖြစ်ကြောင်း ရှင်းလင်းချက်။
+      - <form id="contact-form" novalidate>: Browser default popup အစား
+        ငါတို့ရဲ့ Custom JS validation ကို သုံးဖို့ novalidate ထည့်ထားပါတယ်။
+      - Input တိုင်းမှာ aria-describedby နဲ့ #name-error, #email-error,
+        #message-error (role="alert") ချိတ်ဆက်ထားပါတယ်။
+      - #message-count: Live character counter (0 / 500 characters (min 20))။
+      - #form-status: role="status" + hidden attribute။
+
+၂။ CSS (css/style.css)
+
+  - .form-control.is-invalid: Error ဖြစ်ရင် Border အနီ + Soft red background
+    ပြပေးပါတယ်။
+  - .field-error:empty { display: none; }: Error မရှိချိန် နေရာလွတ် မယူထားအောင်
+    ဖျောက်ပေးပါတယ်။
+  - .char-count.is-over: စာလုံး 500 ကျော်သွားရင် အနီရောင် Bold ပြပေးပါတယ်။
+
+၃။ JS (js/main.js)
+
+  - Validation Rules:
+      - Name: .trim().length >= 2
+      - Email: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+      - Message: .trim().length ဟာ 20 မှ 500 ကြား
+  - Error UX:
+      - Submit နှိပ်ချိန် မမှန်တဲ့ field တွေဘေးမှာ Error ပြပြီး ပထမဆုံး
+        အမှားရှိတဲ့ field ကို .focus() လုပ်ပေးပါတယ်။
+      - User က Error ဖြစ်နေတဲ့ field ထဲ စာပြန်ပြင်ရိုက်လိုက်တာနဲ့ input listener
+        က Error ကို ချက်ချင်း ဖျောက်ပေးပါတယ် (Clear error on fix)။
+      - အားလုံးမှန်ပြီး Submit လုပ်ရင် "Demo only. Your message has not been
+        sent." ပြပြီး Form reset + aria-invalid ရှင်း + Counter ကို 0 / 500
+        ပြန်ချပေးပါတယ်။
+
+Part 6 စစ်ဆေးရန် Checklist:
+
+- [ ] Empty form ကို Submit နှိပ်ကြည့်ပါ -> Error ၃ ခုလုံး ပေါ်ပြီး Focus က Name
+  input ထဲ ရောက်သွားရမယ်။
+- [ ] Name ကို A တစ်လုံးတည်း၊ Email ကို abc၊ Message ကို hi ရိုက်စမ်းပြီး Submit
+  နှိပ်ကြည့်ပါ -> Invalid error တွေ မှန်မှန်ပေါ်ရမယ်။
+- [ ] Message ထဲ စာရိုက်တိုင်း 0 / 500 counter တက်နေရမယ် (501 ကျော်ရင်
+  အနီပြရမယ်)။
+- [ ] Field တွေကို အမှန်ပြင်ရိုက်လိုက်တာနဲ့ အနီရောင် Error ချက်ချင်း
+  ပျောက်သွားရမယ်။
+- [ ] Valid data နဲ့ Submit နှိပ်ရင် "Demo only. Your message has not been
+  sent." ပေါ်ပြီး Form ပြန်ရှင်းသွားရမယ်။
+
+PART 7: Final QA, Git Workflow (Branch & PR), Screenshots & README.md
+
+၁။ Responsive & Console QA (Browser DevTools)
+
+  - 360px (Mobile), 768px (Tablet), 1280px (Desktop) ၃ မျိုးလုံးမှာ Horizontal
+    scroll မရှိကြောင်း စစ်ပါ (document.documentElement.scrollWidth <=
+    window.innerWidth)။
+  - Preview ဖွင့်ရန်: start index.html, Microsoft Live Preview extension,
+    သို့မဟုတ် npx serve . သုံးပါ။
+  - Console tab မှာ Error/Warning 0 ဖြစ်နေရမယ်။
+
+၂။ Desktop & Mobile Screenshots ရိုက်ခြင်း
+
+  - assets/screenshot-desktop.png (1280px view) နှင့်
+    assets/screenshot-mobile.png (360px view) ကို DevTools Device Toolbar (သို့)
+    Screenshot tool နဲ့ ရိုက်သိမ်းပါ။
+
+၃။ README.md ရေးခြင်း
+
+  - Project title & live/repo overview
+  - Features list (Light/Dark theme, Floating pill navbar + accessible mobile
+    menu, Data-driven project filters, Validated demo contact form)
+  - Tech Stack (Pure HTML5, Pure CSS3, Vanilla ES6+ JS — Zero frameworks)
+  - Screenshots (Desktop & Mobile image preview)
+  - How to run locally (start index.html / Live Preview)
+
+၄။ Git Branch, Pull Request & Merge Workflow (Assignment Rule)
+
+1.  Feature branch ဖွင့်ပြီး စစ်ထားတာတွေ Commit လုပ်ပါ-
+    git checkout -b feature/ux-and-js-features
+    git status
+    git add index.html css/style.css js/main.js assets/avatar.png
+    git commit -m "Implement floating glass navbar, UX redesign, and interactive JS features"
+2.  GitHub မှာ Dedicated repo အသစ်တစ်ခု ဖန်တီးပြီး origin ချိတ်ကာ Feature branch
+    ကို Push လုပ်ပါ-
+    git remote add origin <YOUR_GITHUB_REPO_URL>
+    git push -u origin main
+    git push -u origin feature/ux-and-js-features
+3.  GitHub Web ပေါ်မှာ feature/ux-and-js-features -> main ဆီ Pull Request (PR)
+    ဖွင့်ပါ၊ Diff တွေကို Review လုပ်ပြီး Merge Pull Request နှိပ်ပါ။
+4.  Local မှာ main ကို ပြန်ဆွဲယူပြီး Screenshots + README.md ကို နောက်ဆုံး
+    commit/push လုပ်ပါ-
+    git checkout main
+    git pull origin main
+
+================================================================================
+END OF GUIDE — Good luck! Complete Part 1 -> Part 7 one step at a time.
+================================================================================
+
+ဒီ Guide ကို .txt ထဲ သိမ်းထားပြီး Part 1 ကနေ စလိုက်တော့နော်။ တစ်ပိုင်းချင်းစီ
+စစ်ရင်း နားမလည်တာ (သို့) Error တစ်ခုခု တွေ့တာနဲ့ အချိန်မရွေး ပြန်မေးလိုက်ပါ—ငါ
+အမြဲကူညီဖို့ အသင့်ပါပဲ! 💪

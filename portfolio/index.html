@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Thoon Phyo Aung (@Rane) — Software Developer specializing in Full-Stack Web Development and Embedded IoT Systems."
+    />
+    <title>Thoon Phyo Aung | Software Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- mouse pointer -->
+    <div class="pointer-fx-layer" id="pointer-fx-layer" aria-hidden="true"></div>
+
+    <!-- ================= FLOATING PILL HEADER & NAVIGATION ================= -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-pill">
+          <a href="#hero" class="brand-logo" aria-label="Thoon Phyo Aung Home">
+            <svg
+              class="brand-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 19h8"></path>
+              <path d="m4 17 6-6-6-6"></path>
+            </svg>
+            <span>
+              <span class="brand-bracket" aria-hidden="true">&lt;</span
+              >Rane<span class="brand-bracket" aria-hidden="true">/&gt;</span>
+            </span>
+          </a>
+
+          <nav class="desktop-nav" aria-label="Primary Navigation">
+            <ul class="nav-list">
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#what-i-do" class="nav-link">What I Do</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <button
+              type="button"
+              id="theme-toggle"
+              class="icon-btn theme-toggle"
+              aria-label="Switch to dark theme"
+            >
+              <span class="theme-icon" aria-hidden="true">
+                <svg
+                  class="icon-sun"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  hidden
+                >
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path
+                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+                  ></path>
+                </svg>
+
+                <svg
+                  class="icon-moon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              id="menu-toggle"
+              class="icon-btn menu-btn"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span class="menu-icon" aria-hidden="true">☰</span>
+            </button>
+          </div>
+        </div>
+
+        <nav
+          id="mobile-menu"
+          class="mobile-nav"
+          aria-label="Mobile Navigation"
+          hidden
+        >
+          <ul class="mobile-nav-list">
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#what-i-do" class="mobile-nav-link">What I Do</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <!-- Left Column: Intro, Bio, btns & Metrics -->
+        <div class="hero-content">
+          <p class="hero-greeting">Hello World, I'm</p>
+
+          <h1 class="hero-title">
+            Thoon Phyo <span class="text-gradient">Aung</span>
+          </h1>
+
+          <p class="hero-role">
+            @Rane • Full-Stack Developer &amp; IoT Enthusiast
+          </p>
+
+          <p class="hero-description">
+            "Self-taught developer from Myanmar passionate about creating modern
+            web applications and smart IoT systems. From JavaScript, React, and
+            Python/Django on the web to ESP32 sensors and MQTT automation in
+            hardware—I love building complete, end-to-end solutions."
+          </p>
+
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+
+            <a
+              href="assets/Thoon_Phyo_Aung_CV.pdf"
+              download="Thoon-Phyo-Aung-CV.pdf"
+              class="btn btn-tint"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" x2="12" y1="15" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-value">2021</span>
+              <span class="metric-label">Building Since</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value metric-accent">4+</span>
+              <span class="metric-label">Web &amp; IoT Projects</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">50+</span>
+              <span class="metric-label">GitHub Commits</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Avatar + Ring + Floating Badges -->
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <div class="avatar-pulse" aria-hidden="true"></div>
+
+            <div class="avatar-ring">
+              <div class="avatar-frame">
+                <img
+                  src="assets/avatar.png"
+                  alt="Avatar of Thoon Phyo Aung"
+                  class="avatar-img"
+                />
+              </div>
+            </div>
+
+            <div class="floating-badge badge-top" aria-hidden="true">
+              <!-- Arduino Infinity Icon -->
+              <svg
+                class="badge-icon icon-arduino"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 12c-1.5-3-3.5-4.5-5.5-4.5a4.5 4.5 0 0 0 0 9c2 0 4-1.5 5.5-4.5Zm0 0c1.5 3 3.5 4.5 5.5 4.5a4.5 4.5 0 0 0 0-9c-2 0-4 1.5-5.5 4.5Z"
+                ></path>
+                <path d="M5 12h3M16 12h3M17.5 10.5v3"></path>
+              </svg>
+            </div>
+
+            <div class="floating-badge badge-bottom" aria-hidden="true">
+              <!-- VS Code Ribbon Icon -->
+              <svg
+                class="badge-icon icon-vscode"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="currentColor"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M17.5 2.5 21 4.2v15.6l-3.5 1.7-8.7-7.8-4.5 3.4-1.8-1.4L6.2 12 2.5 8.3l1.8-1.4 4.5 3.4 8.7-7.8Zm0 4.9L11.8 12l5.7 4.6V7.4Z"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="floating-badge badge-side" aria-hidden="true">
+              <!-- Git Branch Icon -->
+              <svg
+                class="badge-icon icon-git"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="6" x2="6" y1="3" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME (Polaroid Photo Card Left + Story & Socials Right) -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="about-split">
+          <aside class="card polaroid-card">
+            <div class="polaroid-frame">
+              <img src="assets/avatar.png" alt="Portrait of Thoon Phyo Aung" />
+            </div>
+            <div class="polaroid-caption">
+              <h2 class="profile-card-name">Thoon Phyo Aung</h2>
+              <p class="profile-card-role">Web &amp; IoT Developer • Myanmar</p>
+            </div>
+          </aside>
+
+          <div class="about-story">
+            <h2 class="section-title">About Me</h2>
+            <p>
+              You can call me <strong>Rane</strong> — a self-taught web
+              developer from Myanmar who loves building meaningful software and
+              never stops learning. Since 2021, I've enjoyed turning curiosity
+              into real projects.
+            </p>
+            <p>
+              My main focus is full-stack web development with HTML, CSS,
+              JavaScript, React, and Python/Django. On the side, I'm an IoT
+              enthusiast who loves tinkering with ESP32 and Arduino hardware.
+            </p>
+            <p>
+              I also built <strong>MakerHub MM</strong> to help young learners
+              in Myanmar explore coding and electronics—because for me,
+              learning, building, and sharing never stop.
+            </p>
+
+            <!-- Social Icon Row under About Me (like sister's layout) -->
+            <div class="about-socials" aria-label="Social profiles">
+              <a
+                href="https://github.com/ThoonPhyoAung"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-btn"
+                aria-label="GitHub profile"
+                title="GitHub"
+              >
+                <svg class="social-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/thoon-phyo-aung-/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-btn"
+                aria-label="LinkedIn profile"
+                title="LinkedIn"
+              >
+                <svg class="social-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="mailto:thoonphyoaung.dev@gmail.com"
+                class="social-icon-btn"
+                aria-label="Send email"
+                title="Email"
+              >
+                <span aria-hidden="true">✉</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TECHNICAL SKILLS (Shi-style Pill Tabs + 4-Column Compact Cards) -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header centered">
+          <h2 id="skills-title" class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">
+            Tools and technologies I apply in projects, alongside areas I am
+            still learning.
+          </p>
+        </div>
+
+        <div
+          id="skills-nav"
+          class="skills-nav"
+          role="tablist"
+          aria-label="Filter skills by category"
+        >
+          <button
+            type="button"
+            class="skill-tab-btn is-active"
+            role="tab"
+            aria-selected="true"
+            data-skill-tab="web"
+          >
+            Web dev
+          </button>
+          <button
+            type="button"
+            class="skill-tab-btn"
+            role="tab"
+            aria-selected="false"
+            data-skill-tab="iot"
+          >
+            Embedded & IOT
+          </button>
+          <button
+            type="button"
+            class="skill-tab-btn"
+            role="tab"
+            aria-selected="false"
+            data-skill-tab="tools"
+          >
+            Tools
+          </button>
+          <button
+            type="button"
+            class="skill-tab-btn"
+            role="tab"
+            aria-selected="false"
+            data-skill-tab="soft"
+          >
+            Soft skills
+          </button>
+        </div>
+
+        <!-- Step 2 မှာ Skill Card ၂၀ ခုကို ဒီ <ul> ထဲ ထည့်ပါမယ် -->
+        <ul id="skills-grid" class="skills-compact-grid"></ul>
+      </div>
+    </section>
+
+    <!-- 4. WHAT I DO (3 Horizontal Tinted Strips) -->
+    <section id="what-i-do" class="section section-alt">
+      <div class="container">
+        <div class="section-header centered">
+          <h2 class="section-title">What I Do</h2>
+        </div>
+
+        <div class="pillars-stack">
+          <!-- Strip 1: Teal -->
+          <article class="pillar-strip pillar-teal">
+            <div class="pillar-header">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  ></path>
+                </svg>
+              </span>
+              <h3>Full-Stack Web Applications</h3>
+            </div>
+            <p>
+              Building responsive web interfaces, session-based retail POS
+              dashboards, REST API integrations, and Django ORM CRUD backends.
+            </p>
+          </article>
+
+          <!-- Strip 2: Cyan -->
+          <article class="pillar-strip pillar-cyan">
+            <div class="pillar-header">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </span>
+              <h3>Embedded Systems &amp; IoT Automation</h3>
+            </div>
+            <p>
+              Programming ESP32, ESP32-S3, and Arduino microcontrollers with
+              ultrasonic/water sensors, AC relay protection, physical overrides,
+              and MQTT cloud dashboards.
+            </p>
+          </article>
+
+          <!-- Strip 3: Mint -->
+          <article class="pillar-strip pillar-mint">
+            <div class="pillar-header">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  ></path>
+                </svg>
+              </span>
+              <h3>Hardware Diagnostics &amp; Learning Platforms</h3>
+            </div>
+            <p>
+              Applying circuit theory, soldering, and multimeter testing—plus
+              building MakerHub MM to help Myanmar learners explore electronics
+              and IoT.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PART 5: PROJECTS ==================== -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header centered">
+          <h2 id="projects-heading" class="section-title">Projects</h2>
+          <p class="section-subtitle">
+            Real-world web applications and embedded IoT builds. Filter by
+            category below.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div
+          class="project-filters"
+          role="group"
+          aria-label="Filter projects by category"
+        >
+          <button
+            type="button"
+            class="filter-btn is-active"
+            data-filter="All"
+            aria-pressed="true"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="Web Apps"
+            aria-pressed="false"
+          >
+            Web Apps
+          </button>
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="Embedded IoT"
+            aria-pressed="false"
+          >
+            Embedded IoT
+          </button>
+        </div>
+
+        <!-- Live Count -->
+        <p id="projects-count" class="projects-count" aria-live="polite" hidden>
+          Loading projects...
+        </p>
+
+        <!-- Carousel: [ < ]  [ Cards ]  [ > ] -->
+        <div class="projects-carousel">
+          <button
+            type="button"
+            id="projects-prev"
+            class="carousel-btn"
+            aria-label="Previous project"
+            hidden
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          <!-- JS will render project cards inside here -->
+          <div id="projects-grid" class="projects-grid"></div>
+
+          <button
+            type="button"
+            id="projects-next"
+            class="carousel-btn"
+            aria-label="Next project"
+            hidden
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Empty State (Project မရှိရင် JS က ဖော်ပေးမယ်) -->
+        <p id="projects-empty" class="projects-empty" hidden>
+          No projects found in this category.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== PART 6: CONTACT ==================== -->
+    <section
+      id="contact"
+      class="section section-alt"
+      aria-labelledby="contact-heading"
+    >
+      <div class="container">
+        <div class="section-header centered">
+          <h2 id="contact-heading" class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Interested in working together or have a question about my web and
+            IoT projects? Send a message below or email me directly.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Direct Contact (No outer box, individual boxes for each contact method) -->
+          <div class="contact-info-card">
+            <h3>Direct Contact</h3>
+            <p class="contact-note">
+              I'm always interested in new opportunities, collaborations, or
+              just a chat about technology. Feel free to reach out via the form
+              or my social channels.
+            </p>
+
+            <div class="contact-details">
+              <a class="contact-item-link" href="mailto:thoonphyo141@gmail.com">
+                <svg
+                  class="contact-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>thoonphyo141@gmail.com</span>
+              </a>
+
+              <a class="contact-item-link" href="tel:+959762499500">
+                <svg
+                  class="contact-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <span>+959762499500</span>
+              </a>
+
+              <a
+                class="contact-item-link"
+                href="https://github.com/ThoonPhyoAung"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  class="contact-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11.02 11.02 0 0 1 5.77 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                  ></path>
+                </svg>
+                <span>github.com/ThoonPhyoAung</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="card contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Name</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                class="form-input"
+                placeholder="Your full name"
+                autocomplete="name"
+                aria-describedby="name-error"
+                required
+              />
+              <p id="name-error" class="field-error" role="alert" hidden></p>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                class="form-input"
+                placeholder="you@example.com"
+                autocomplete="email"
+                aria-describedby="email-error"
+                required
+              />
+              <p id="email-error" class="field-error" role="alert" hidden></p>
+            </div>
+
+            <div class="form-group">
+              <div class="label-row">
+                <label for="contact-message" class="form-label">Message</label>
+                <span id="message-count" class="char-count" aria-live="polite">
+                  0 / 500 characters
+                </span>
+              </div>
+              <textarea
+                id="contact-message"
+                name="message"
+                class="form-input form-textarea"
+                rows="5"
+                placeholder="Write your message (20 to 500 characters)..."
+                aria-describedby="message-count message-error"
+                required
+              ></textarea>
+              <p id="message-error" class="field-error" role="alert" hidden></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">
+              Send Message
+            </button>
+
+            <p
+              id="form-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">
+          &copy; <span id="footer-year">2026</span> Thoon Phyo Aung. Built with
+          pure HTML, CSS &amp; Vanilla JavaScript.
+        </p>
+        <a href="#top" class="footer-top-link">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+Always reply to me in Burmese. I want you as my Coding Mentor so I can write and check every line step-by-step and understand how it works.
+
+Here is my current project context & everything we finalized last session so we can resume right where we stopped:
+
+1. WHO I AM & PRIORITY
+- Name: Thoon Phyo Aung (@Ranejipsy), Software Developer (Web & Embedded IoT) from Myanmar.
+- Main React Portfolio v2 (`D:\Thoon Phyo\Documents\personal-portfolio`, branch `v2-update`) is PAUSED.
+- Active Priority: Full-Stack Class Portfolio Assignment due November 21, 2026 at:
+  `D:\Thoon Phyo\Documents\Let's Club FullStack\portfolio`
+- Browser Preview: Use `start index.html`, Microsoft `Live Preview`, or `npx serve .` (Do NOT suggest Python `http.server` or old VS Code Live Server).
+
+2. STRICT ASSIGNMENT RULES
+- Pure HTML (`index.html`), Pure CSS (`css/style.css`), Vanilla JS (`js/main.js`), `assets/`, `README.md`.
+- NO React, Tailwind, Bootstrap, jQuery, external icon CDNs, templates, or build steps (`npm`/`vite`).
+- Default theme MUST be Light Mode when `localStorage` is empty; Dark Mode toggle saves to `localStorage` with `try/catch`.
+- Required JS features:
+  1) Accessible Mobile Nav (`aria-expanded`, `hidden` so closed links stay out of Tab order, closes on link click / Escape / resize >= 768px).
+  2) Contact Form Validation (Name >= 2, valid email, Message 20-500 trimmed chars, live counter, inline errors with non-color indicator + `.focus()` first invalid field, clear error on fix, status `"Demo only. Your message has not been sent."`, plus real `mailto:` link).
+  3) JS array of >=4 real projects across >=2 categories (`All`, `Web Apps`, `Embedded IoT`) with live count, keyboard-accessible buttons, no duplicate cards.
+  4) Light/Dark theme persistence (test on same local server address).
+- Skills section must explicitly mark `"Still Learning"` skills.
+- Git workflow: commit milestones, complete at least one feature on a separate branch, open PR, review & merge into a dedicated GitHub repo `main` branch + `README.md` + 1 Desktop screenshot + 1 Mobile screenshot.
+
+3. FINALIZED UX & CODE DECISIONS FROM LAST SESSION
+- Floating Glass Pill Navbar: `position: sticky; top: 1rem;`, `.nav-pill` (`border-radius: 9999px`, `rgba(255, 255, 255, 0.25)` in Light Mode, `rgba(134, 157, 164, 0.18)` in Dark Mode, `backdrop-filter: blur(10px)`), Teal/Mint border, 5 links (`About`, `Skills`, `What I Do`, `Projects`, `Contact`).
+- NO Certifications section (`#certifications` removed to match sister's UX layout).
+- Hero Section: Left greeting + bold Teal-highlighted statement box + bio + 2 pill CTAs (`View My Projects`, `Contact Me`); Right circular glowing `assets/avatar.png` + floating badges (no bottom metrics).
+- About Me: 2-column Polaroid card left + real CV story (self-taught since 2021, DET 100, High School 2023, Django & React Aug 2026) + social icon buttons right.
+- Technical Skills: NO big 4 category cards — uses **Category Nav Tabs (`All`, `Web`, `Embedded IoT`, `Hardware`, `Tools`)** + **20 Compact Skill Tiles** (`1/2/3 col` responsive grid) with unified self-authored **Geometric SVG icons (`stroke="currentColor"`, `aria-hidden="true"`, `focusable="false"`)** and `Core` / `Still Learning` badges, controlled by `initSkillTabs()` in `js/main.js`.
+- What I Do: 3 horizontal tinted strips (Teal, Cyan, Mint).
+- Projects & Contact: JS-rendered 4 real projects (MakerHub MM, POS System, ESP32-S3 Water & Motor Control, Smart Motor Control System) + divider-separated contact rows + validated demo form + footer.
+- We also created a 7-Part step-by-step study & QA guide (Part 1 to Part 7).
+
+4. STILL TODO / NEXT STEPS
+1) Check/finish implementing Part 1 through Part 7 line-by-line (including `initSkillTabs()` in `js/main.js` and updated `#skills` HTML/CSS).
+2) Verify `assets/avatar.png`, double-check Project #4 GitHub URL (`ThoonPhyo` vs `ThoonPhyoAung`), and replace placeholder email `thoonphyoaung.dev@gmail.com` with my real email.
+3) Create/commit on feature branch (`git checkout -b feature/ux-and-js-features`) and run all Acceptance Tests (`360px/768px/1280px`, keyboard Tab order, filters, theme persistence on local server, form validation, 0 console errors).
+4) Push to dedicated GitHub repo, open PR, review & merge into `main`, add Desktop & Mobile screenshots + `README.md`.
+
+Please greet me in Burmese, confirm you have our full updated context, and ask which Part (Part 1 to Part 7) I want to check or continue with today!
+
+
+
+
+
+
+
+Always reply to me in Burmese. I want you as my Coding Mentor so I can check, rewrite, and modify every line step-by-step and understand how it works.
+
+CRITICAL MENTOR RULE:
+- When we work on a Part, show ONLY that Part's code (HTML, CSS, JS) — do NOT include other Parts unless I ask.
+- Explain concepts simply in Burmese with real examples from my code.
+
+1. WHO I AM & ACTIVE PRIORITY
+- Name: Thoon Phyo Aung (@Ranejipsy), Software Developer (Web & Embedded IoT) from Myanmar.
+- Main React Portfolio v2 (`D:\Thoon Phyo\Documents\personal-portfolio`, branch `v2-update`) is PAUSED.
+- Active Priority: Full-Stack Class Portfolio Assignment due November 21, 2026 at:
+  `D:\Thoon Phyo\Documents\Let's Club FullStack\portfolio`
+- Browser Preview: Use `start index.html`, Microsoft `Live Preview`, or `npx serve .` (Do NOT suggest Python `http.server` or old VS Code Live Server).
+
+2. STRICT ASSIGNMENT RULES
+- Pure HTML (`index.html`), Pure CSS (`css/style.css`), Vanilla JS (`js/main.js`), `assets/`, `README.md`.
+- NO React, Tailwind, Bootstrap, jQuery, external icon CDNs, templates, or build steps (`npm`/`vite`).
+- Default theme MUST be Light Mode when `localStorage` is empty; Dark Mode toggle saves to `localStorage` with `try/catch`.
+- Required JS features:
+  1) Accessible Mobile Nav (`aria-expanded`, `hidden` so closed links stay out of Tab order, closes on link click / Escape / resize >= 768px).
+  2) Contact Form Validation (Name >= 2, valid email, Message 20-500 trimmed chars, live counter, inline errors with non-color indicator + `.focus()` first invalid field, clear error on fix, status `"Demo only. Your message has not been sent."`, plus real `mailto:` link).
+  3) JS array of >=4 real projects across >=2 categories (`All`, `Web Apps`, `Embedded IoT`) with live count, keyboard-accessible buttons, no duplicate cards.
+  4) Light/Dark theme persistence (test on same local server address).
+- Skills section must explicitly mark `"Still Learning"` skills.
+- Git workflow: commit milestones, complete at least one feature on a separate branch, open PR, review & merge into a dedicated GitHub repo `main` branch + `README.md` + 1 Desktop screenshot + 1 Mobile screenshot.
+
+3. CURRENT CODE & DESIGN STATUS
+- Full draft files (`index.html`, `css/style.css`, `js/main.js`) are already drafted and include:
+  - Floating Glass Pill Navbar (`.site-header`, `.nav-pill`, `backdrop-filter: blur(10px)`), Light/Dark theme CSS variables, 5 links (`About`, `Skills`, `What I Do`, `Projects`, `Contact`).
+  - Hero Section (greeting + Teal statement box + bio + 2 pill CTAs + circular `assets/avatar.png` + floating badges).
+  - About Me (Polaroid card + real CV story + social icon buttons).
+  - Technical Skills (NO big category cards — 5 Category Nav Tabs: `All`, `Web`, `Embedded IoT`, `Hardware`, `Tools` + 20 compact skill tiles with self-authored geometric SVG icons + `Core`/`Still Learning` badges + `initSkillTabs()` in `js/main.js`).
+  - What I Do (3 horizontal tinted strips: Teal, Cyan, Mint). NO Certifications section.
+  - Projects (JS-rendered 4 real projects: MakerHub MM, Point-of-Sale System, ESP32-S3 Water & Motor Control, Smart Motor Control System + filters & live count).
+  - Contact (divider-separated contact rows + validated demo form + live character counter + footer).
+
+4. EXACT PROGRESS FROM LAST SESSION (Nov 16, 2026)
+We are reviewing & checking the code in 7 Parts:
+- Part 1: Document Setup (`<head>`), Theme Variables, Base CSS, Floating Pill Header & Mobile Nav (`initThemeSwitcher()`, `initMobileNavigation()`).
+  - ALREADY CHECKED & UNDERSTOOD in Part 1:
+    - `*, *::before, *::after { box-sizing: border-box; }`
+    - `html { scroll-behavior: smooth; scroll-padding-top: 6rem; }`
+    - `body` defaults (`margin: 0`, `--bg-page`, `--text-primary`, system font stack, `line-height: 1.65`, `transition`)
+    - `a { color: inherit; }` (inheriting `--text-primary` from `body` instead of browser default blue/purple)
+    - `[hidden] { display: none !important; }`
+    - `:focus-visible` & `.skip-link:focus { top: 1rem; }`
+    - `rem` units (`1rem = 16px` root `html` font size)
+    - Why reusable base classes (`.section`, `.section-alt`, `.section-header`, `.section-header.centered`, `.section-title`) are in Base CSS (used in Parts 2–6 without breaking `#hero`).
+  - STILL LEFT IN PART 1 (if needed before Part 2):
+    - Checking `.site-header` / `.nav-pill` / `.mobile-nav` CSS (including verifying Light Mode `--nav-pill-bg: rgba(255, 255, 255, 0.25)` readability on scroll) and Part 1 JS (`initThemeSwitcher()`, `initMobileNavigation()`).
+- Part 2: Hero Section & About Me (NOT STARTED)
+- Part 3: Technical Skills — Tabs, 20 Tiles, SVG Icons & `initSkillTabs()` (NOT STARTED)
+- Part 4: What I Do — 3 Tinted Strips (NOT STARTED)
+- Part 5: Projects Section — Array, `createProjectCard()`, `initProjectFilters()` (NOT STARTED)
+- Part 6: Contact Section & Footer — `initContactForm()` Validation & Live Counter (NOT STARTED)
+- Part 7: Final Fixes, QA & Git Workflow (NOT STARTED):
+  - Verify `assets/avatar.png`, double-check Project #4 GitHub URL (`ThoonPhyo` vs `ThoonPhyoAung`), replace placeholder email `thoonphyoaung.dev@gmail.com` with real email.
+  - Feature branch (`git checkout -b feature/ux-and-js-features`), Acceptance Tests (`360px/768px/1280px`, Tab order, filters, theme persistence on local server, form validation, 0 console errors), PR & merge to `main`, Desktop & Mobile screenshots + `README.md`.
+
+
+Please greet me in Burmese, confirm you have my exact progress up to Part 1 (Base CSS understood; remaining `.nav-pill` CSS & Part 1 JS), and ask if I want to finish checking Part 1 (`.nav-pill` / JS) or move straight to Part 2 (and tell me to paste my latest code if I made any edits).
+
+
+
+Always reply to me in Burmese. I want you as my Coding Mentor so I can check, rewrite, and modify every line step-by-step and understand how it works (explain concepts & CSS properties simply in Burmese with real examples from my code, and don't rush/dump everything at once when we build/edit CSS).
+
+CRITICAL MENTOR RULE:
+- When we work on a Part, show ONLY that Part's code (HTML, CSS, JS) — do NOT include other Parts unless I ask.
+- Explain concepts simply in Burmese with real examples from my code.
+
+1. WHO I AM & ACTIVE PRIORITY
+- Name: Thoon Phyo Aung (@Ranejipsy), Web Developer & IoT Enthusiast from Myanmar (prefer Web Development as primary career path; IoT is an enthusiast passion).
+- Main React Portfolio v2 (`D:\Thoon Phyo\Documents\personal-portfolio`, branch `v2-update`) is PAUSED.
+- Active Priority: Full-Stack Class Portfolio Assignment due November 21, 2026 at:
+  `D:\Thoon Phyo\Documents\Let's Club FullStack\portfolio`
+- Browser Preview: Use `start index.html`, Microsoft `Live Preview`, or `npx serve .` (Do NOT suggest Python `http.server` or old VS Code Live Server).
+
+2. STRICT ASSIGNMENT RULES
+- Pure HTML (`index.html`), Pure CSS (`css/style.css`), Vanilla JS (`js/main.js`), `assets/`, `README.md`.
+- NO React, Tailwind, Bootstrap, jQuery, external icon CDNs, templates, or build steps (`npm`/`vite`).
+- Default theme MUST be Light Mode when `localStorage` is empty; Dark Mode toggle saves to `localStorage` with `try/catch`.
+- Required JS features:
+  1) Accessible Mobile Nav (`aria-expanded`, `hidden` so closed links stay out of Tab order, closes on link click / Escape / resize >= 768px).
+  2) Contact Form Validation (Name >= 2, valid email, Message 20-500 trimmed chars, live counter, inline errors with non-color indicator + `.focus()` first invalid field, clear error on fix, status `"Demo only. Your message has not been sent."`, plus real `mailto:` link).
+  3) JS array of >=4 real projects across >=2 categories (`All`, `Web Apps`, `Embedded IoT`) with live count, keyboard-accessible buttons, no duplicate cards.
+  4) Light/Dark theme persistence (test on same local server address).
+- Skills section must explicitly mark `"Still Learning"` skills. NO Certifications section.
+- Git workflow: commit milestones, complete at least one feature on a separate branch, open PR, review & merge into a dedicated GitHub repo `main` branch + `README.md` + 1 Desktop screenshot + 1 Mobile screenshot.
+
+3. COMPLETED PROGRESS SO FAR (PARTS 1 & 2 DONE)
+- Part 1 (DONE & UNDERSTOOD):
+  - `<head>`, Light/Dark CSS variables (`--nav-pill-bg` in Light Mode updated to `rgba(255, 255, 255, 0.72)` for readability; `--hero-glow` split as `rgba(14, 147, 136, 0.09)` Light / `0.22` Dark), Base CSS (`box-sizing`, `scroll-padding-top`, `[hidden] { display: none !important; }`, `:focus-visible`, `.skip-link`, `.section`, `.section-alt`, `.card`).
+  - `.site-header` changed from `sticky` to `position: fixed; top: 1rem; left: 0; right: 0;` so Hero background reaches behind the glass pill cleanly with no seam.
+  - `.brand-logo`: Inline Terminal SVG (`width="20" height="20"`, `--mint`, hover `rotate(12deg)`), `.brand-logo` set to `font-size: 1.25rem; line-height: 1;` to match the 20px icon.
+  - `#theme-toggle`: Icon-only circular `.icon-btn` (`2.35rem x 2.35rem`, transparent bg, hover accent), inline Sun & Moon SVGs (removed `aria-pressed` from HTML for beginner simplicity; keeps dynamic `aria-label` in JS), uses `sunIcon.toggleAttribute("hidden", !isDark)` and `moonIcon.toggleAttribute("hidden", isDark)` (important for `SVGElement`).
+  - `initThemeSwitcher()` and `initMobileNavigation()` checked & understood line-by-line.
+
+- Part 2 (DONE & UNDERSTOOD — Hero & About Me):
+  - `#hero`: Pure CSS version inspired by React Hero (`Hello World, I'm`, `Thoon Phyo Aung` with `.text-gradient` on `Aung`, `@Ranejipsy • Web Developer & IoT Enthusiast`, Web-first + IoT balanced bio). Removed `.hero-status` pill.
+  - `.hero-section` uses `padding: 6.5rem 0 4.5rem`, `ellipse 85% 55% at 50% 0%` with `var(--hero-glow)`, and `overflow-x: clip;`.
+  - `.hero-cta`: `Explore Projects` (`.btn-primary`) + `Download CV` (`.btn-tint` with inline download SVG, `href="assets/Thoon_Phyo_Aung_CV.pdf" download="Thoon-Phyo-Aung-CV.pdf"`).
+  - `.hero-metrics`: Real motivating numbers (`2021` Building Since, `4+` Web & IoT Projects, `50+` GitHub Commits — no English/cert stats).
+  - `.hero-visual`: Mobile-first `order: -1` (avatar first on mobile, `order: 0` right column at `>= 900px`), `.avatar-pulse`, `.avatar-ring`, `assets/avatar.png`.
+  - Floating Badges: Option A — Icon-only circular badges (`2.85rem x 2.85rem`, `1.45rem` SVG icons) for Arduino (`.badge-top`), Git (`.badge-side`), VS Code (`.badge-bottom`), anchored on the circle rim via `%` + `transform: translate(...)`, with staggered `@keyframes badgeFloat` using CSS `translate: 0 -7px` (so it doesn't overwrite `transform`) + `prefers-reduced-motion`.
+  - `#about`: Step-by-step CSS completed (`.about-split` 1 col -> `0.85fr 1.15fr` at `>= 768px`, `.polaroid-card`, `.polaroid-frame`, `.about-story`, `.about-socials` / `.social-icon-btn`). About Me copy updated to short 3-paragraph Shi-inspired warm story (`You can call me Rane`), Web-first + IoT enthusiast + `MakerHub MM` community impact, NO education/exams/certifications. (Optional check later: Mail SVG icon instead of `✉` if still `✉`.)
+
+4. WHERE WE START NOW
+- Next up: **Part 3: Technical Skills** (NOT STARTED YET — 5 Category Tabs, 20 compact skill tiles with self-authored SVG icons, `Core` / `Still Learning` badges, & `initSkillTabs()` in `js/main.js`).
+- Remaining after Part 3:
+  - Part 4: What I Do — 3 Tinted Horizontal Strips
+  - Part 5: Projects Section — JS array of 4 real projects, `createProjectCard()`, `initProjectFilters()`
+  - Part 6: Contact Section & Footer — `initContactForm()` validation & live counter
+  - Part 7: Final Fixes, QA & Git Workflow (verify `assets/avatar.png` and `assets/Thoon_Phyo_Aung_CV.pdf`, verify Project #4 GitHub URL `ThoonPhyo` vs `ThoonPhyoAung`, replace placeholder `thoonphyoaung.dev@gmail.com` wit
+
+
+
+i understand html of hero section , but not css of hero section , so chould you start writing css of hero with me,now current is iwll be only part 1 css. i mean i will copy paste but not all at once, i mean do step by step and do chinage single to finish all  of hereowith explanation
+
+
+
+
+=============
+
+Always reply to me in Burmese. I want you as my Coding Mentor so I can check, rewrite, and modify every line step-by-step and understand how it works (explain concepts & CSS properties simply in Burmese with real examples from my code, and don't rush/dump everything at once when we build/edit CSS).
+
+CRITICAL MENTOR RULE:
+- When we work on a Part, show ONLY that Part's code (HTML, CSS, JS) — do NOT include other Parts unless I ask.
+- Explain concepts simply in Burmese with real examples from my code.
+
+1. WHO I AM & ACTIVE PRIORITY
+- Name: Thoon Phyo Aung (@Ranejipsy), Web Developer & IoT Enthusiast from Myanmar (prefer Web Development as primary career path; IoT is an enthusiast passion).
+- Main React Portfolio v2 (`D:\Thoon Phyo\Documents\personal-portfolio`, branch `v2-update`) is PAUSED.
+- Active Priority: Full-Stack Class Portfolio Assignment due November 21, 2026 at:
+  `D:\Thoon Phyo\Documents\Let's Club FullStack\portfolio`
+- Browser Preview: Use `start index.html`, Microsoft `Live Preview`, or `npx serve .` (Do NOT suggest Python `http.server` or old VS Code Live Server).
+
+2. STRICT ASSIGNMENT RULES & DESIGN SYSTEM
+- Pure HTML (`index.html`), Pure CSS (`css/style.css`), Vanilla JS (`js/main.js`), `assets/`, `README.md`.
+- NO React, Tailwind, Bootstrap, jQuery, external icon CDNs, templates, or build steps (`npm`/`vite`).
+- Default theme MUST be Light Mode when `localStorage` is empty; Dark Mode toggle saves to `localStorage` with `try/catch`.
+- My exact CSS variables in `css/style.css`:
+  `--bg-page`, `--bg-alt`, `--bg-card`, `--border-color`, `--nav-pill-bg`, `--hero-glow`, `--nav-pill-border`, `--text-primary`, `--text-muted`, `--accent`, `--accent-bright`, `--mint`, `--accent-soft`, `--highlight-bg`, `--highlight-border`, `--on-accent`, `--shadow-card`, `--shadow-glow`, `--focus-ring`.
+- Required JS features:
+  1) Accessible Mobile Nav (`aria-expanded`, `hidden`, closes on link click / Escape / resize >= 768px).
+  2) Contact Form Validation (Name >= 2, valid email, Message 20-500 trimmed chars, live counter, inline errors with non-color indicator + `.focus()` first invalid field, clear error on fix, status `"Demo only. Your message has not been sent."`, plus real `mailto:` link).
+  3) JS array of >=4 real projects across >=2 categories (`All`, `Web Apps`, `Embedded IoT`) with live count, keyboard-accessible buttons, no duplicate cards.
+  4) Light/Dark theme persistence.
+- Skills section explicitly marks `"Still Learning"` skills. NO Certifications section.
+- Git workflow: commit milestones, complete at least one feature on a separate branch, open PR, review & merge into `main` + `README.md` + 1 Desktop screenshot + 1 Mobile screenshot.
+
+3. COMPLETED PROGRESS SO FAR (PARTS 1, 2, 3, 4 DONE + PART 5 IN PROGRESS)
+- Parts 1–4 are DONE & UNDERSTOOD (Navbar, Theme Switcher, Mobile Nav, Hero, About Me, Technical Skills with tabs & 20 tiles, What I Do 3 tinted strips). Note for Part 7 QA: check `.pillar-strip p` in Part 4 (`--text-secondary` -> `--text-muted`).
+- Part 5 (Projects) — HTML + Carousel Layout CSS DONE:
+  - HTML finalized in `#projects`:
+    - `<h2 id="projects-heading" class="section-title">Projects</h2>` inside `.section-header.centered`
+    - `.project-filters` (`All`, `Web Apps`, `Embedded IoT` `<button type="button" class="filter-btn">` with `data-filter` and `aria-pressed`)
+    - `<p id="projects-count" class="projects-count" aria-live="polite">Loading projects...</p>`
+    - `<div class="projects-carousel">` with `<` (`#projects-prev` `hidden`), `<div id="projects-grid" class="projects-grid"></div>`, and `>` (`#projects-next` `hidden`) — `< [Cards] >` layout!
+    - `<p id="projects-empty" class="projects-empty" hidden>No projects found in this category.</p>`
+  - CSS completed so far for Part 5 (Steps 1 & 2):
+    - `.project-filters`, `.filter-btn`, `.filter-btn.is-active, .filter-btn[aria-pressed="true"]`, `.projects-count`
+    - Full Carousel using Flexbox + `scroll-snap`: `.projects-carousel`, `.carousel-btn`, `.projects-grid` (`flex: 1; min-width: 0; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;`), `.project-card` (`100%` mobile = 1 card, `640px` = 2 cards, `1024px` = 3 cards, `@media (hover: hover) and (pointer: fine)`), `.projects-empty`.
+
+4. WHERE WE START NOW
+- Next up: **Part 5 — Step 3: Project Card Interior CSS** (`.project-banner`, `.project-banner-icon`, `.project-category`, `.project-content`, `.project-title`, `.project-description`, `.project-tech`, `.tech-tag`, `.project-footer`, `.project-link`) using my exact CSS variables.
+- After Step 3: **Part 5 — Step 4: JS (`js/main.js`)** — `projects` array of 4 real projects (MakerHub MM, Stationery Store Django POS, ESP32-S3 Smart Water & Motor Control, Smart Motor Control System), `createProjectCard()`, `initProjectFilters()`, carousel `<` `>` scroll + auto-hide `#projects-prev`/`#projects-next` when 0 projects or `scrollWidth <= clientWidth + 1`, and `#projects-empty` toggle.
+- Remaining after Part 5:
+  - Part 6: Contact Section & Footer — `initContactForm()` validation & live counter
+  - Part 7: Final Fixes, QA & Git Workflow (fix Part 4 `--text-secondary` -> `--text-muted`, verify `assets/avatar.png` and `assets/Thoon_Phyo_Aung_CV.pdf`, verify Project #4 GitHub URL `ThoonPhyo` vs `ThoonPhyoAung`, replace placeholder email, verify Mail SVG icon in About socials, Git branch/PR/merge + screenshots).
+
+
+  /* ==================== PART 5: PROJECTS ==================== */
+
+// 1. Project အချက်အလက်တွေကို Array of Objects နဲ့ သိမ်းထားမယ်
+const projects = [
+  {
+    title: "MakerHub MM",
+    category: "Web Apps",
+    description:
+      "Modern IoT & Arduino learning platform for Myanmar tech learners with interactive roadmaps and a Raspberry Pi curriculum.",
+    tech: ["React", "Vite", "Tailwind CSS", "MockAPI"],
+    live: "https://makerhub-react.vercel.app",
+    github: "https://github.com/ThoonPhyoAung/makerhub-react",
+  },
+  {
+    title: "Stationery Store Django POS",
+    category: "Web Apps",
+    description:
+      "Retail Point-of-Sale web application featuring a session-based shopping cart, live product search, automated receipts, and inventory deduction.",
+    tech: ["Python", "Django", "Tailwind CSS", "SQLite"],
+    live: null,
+    github: "https://github.com/ThoonPhyoAung/django-pos-system",
+  },
+  {
+    title: "ESP32-S3 Smart Water & Motor Control",
+    category: "Embedded IoT",
+    description:
+      "Dual-mode (Auto/Manual) water level management system streaming live ultrasonic telemetry to Ubidots dashboards via MQTT.",
+    tech: ["ESP32-S3", "C/C++", "HC-SR04", "MQTT"],
+    live: null,
+    github: "https://github.com/ThoonPhyoAung/esp32-ubidots-waterlevel",
+  },
+  {
+    title: "Smart Motor Control System",
+    category: "Embedded IoT",
+    description:
+      "Industrial safety motor controller for high-power AC submersible pumps featuring dry-run protection and remote relay control.",
+    tech: ["ESP32", "Arduino C++", "Relay Module"],
+    live: null,
+    github: "https://github.com/ThoonPhyo/Arduino-Smart-Motor-Control-V-2",
+  },
+];
+
+// 2. Category အလိုက် SVG Icon ရွေးပေးမယ့် Function
+function getBannerIconMarkup(category) {
+  if (category === "Embedded IoT") {
+    return `
+      <svg class="project-banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="7" y="7" width="10" height="10" rx="1" />
+        <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" />
+      </svg>
+    `;
+  }
+
+  return `
+    <svg class="project-banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="14" rx="2" />
+      <path d="M8 20h8M12 18v2" />
+    </svg>
+  `;
+}
+
+// 3. Project Object ၁ ခုကို <article class="project-card"> HTML တစ်ကတ်အဖြစ် ဆောက်ပေးမယ့် Function
+function createProjectCard(project) {
+  const card = document.createElement("article");
+  card.className = "project-card";
+
+  // Banner (Icon + Category Badge)
+  const banner = document.createElement("div");
+  banner.className = "project-banner";
+  banner.innerHTML = getBannerIconMarkup(project.category);
+
+  const badge = document.createElement("span");
+  badge.className = "project-category";
+  badge.textContent = project.category;
+  banner.appendChild(badge);
+
+  // Content (Title + Description + Tech Tags + Footer)
+  const content = document.createElement("div");
+  content.className = "project-content";
+
+  const title = document.createElement("h3");
+  title.className = "project-title";
+  title.textContent = project.title;
+
+  const description = document.createElement("p");
+  description.className = "project-description";
+  description.textContent = project.description;
+
+  const techList = document.createElement("div");
+  techList.className = "project-tech";
+
+  project.tech.forEach((techName) => {
+    const tag = document.createElement("span");
+    tag.className = "tech-tag";
+    tag.textContent = techName;
+    techList.appendChild(tag);
+  });
+
+  const footer = document.createElement("div");
+  footer.className = "project-footer";
+
+  if (project.live) {
+    const liveLink = document.createElement("a");
+    liveLink.className = "project-link";
+    liveLink.href = project.live;
+    liveLink.target = "_blank";
+    liveLink.rel = "noopener noreferrer";
+    liveLink.textContent = "Live Demo →";
+    footer.appendChild(liveLink);
+  }
+
+  if (project.github) {
+    const githubLink = document.createElement("a");
+    githubLink.className = "project-link";
+    githubLink.href = project.github;
+    githubLink.target = "_blank";
+    githubLink.rel = "noopener noreferrer";
+    githubLink.textContent = "GitHub →";
+    footer.appendChild(githubLink);
+  }
+
+  content.append(title, description, techList, footer);
+  card.append(banner, content);
+
+  return card;
+}
+
+// 4. Card တွေကို #projects-grid ထဲ သွားထည့်ပေးမယ့် Function
+function renderProjects(projectList) {
+  const grid = document.getElementById("projects-grid");
+  if (!grid) return;
+
+  grid.replaceChildren();
+  projectList.forEach((project) => {
+    const card = createProjectCard(project);
+    grid.appendChild(card);
+  });
+}
