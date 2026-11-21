@@ -6,7 +6,7 @@ A personal developer portfolio showcasing web applications and embedded IoT hard
 
 The `portfolio` folder showcases selected projects across web development and embedded IoT systems—including **MakerHub MM**, **Stationery Store Django POS**, **ESP32-S3 Smart Water & Motor Control**, and **Smart Motor Control System**—along with direct contact details and an interactive contact form.
 
-- **Live Demo:** [View on Vercel]([https://your-portfolio-link.vercel.app/](https://letstechclubfullstack-course-portfo.vercel.app/)
+- **Live Demo:** [View on Vercel](https://letstechclubfullstack-course-portfo.vercel.app/)
 
 ## Features
 
