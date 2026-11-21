@@ -9,3 +9,6 @@ Welcome to my course projects portfolio repository!
 - 🛍️ **Project 2: Tech Store Web App**
   - [View Live on Vercel](https://letstechclubfullstack-course-tech-s.vercel.app/)
   - Folder: `tech_store_with_api`
+
+- 💼 **Project 3: Personal Portfolio & Projects**
+  - Folder: `portfolio`
