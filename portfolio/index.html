@@ -7,13 +7,17 @@
       name="description"
       content="Portfolio of Thoon Phyo Aung (@Rane) — Software Developer specializing in Full-Stack Web Development and Embedded IoT Systems."
     />
-    <title>Thoon Phyo Aung | Software Developer</title>
+    <title>Thoon Phyo Aung | Full-Stack Developer &amp; IoT Enthusiast</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
   </head>
   <body>
     <!-- mouse pointer -->
-    <div class="pointer-fx-layer" id="pointer-fx-layer" aria-hidden="true"></div>
+    <div
+      class="pointer-fx-layer"
+      id="pointer-fx-layer"
+      aria-hidden="true"
+    ></div>
 
     <!-- ================= FLOATING PILL HEADER & NAVIGATION ================= -->
     <header class="site-header">
@@ -128,7 +132,7 @@
       <div class="container hero-grid">
         <!-- Left Column: Intro, Bio, btns & Metrics -->
         <div class="hero-content">
-          <p class="hero-greeting">Hello World, I'm</p>
+          <p class="hero-greeting">Hello, I'm</p>
 
           <h1 class="hero-title">
             Thoon Phyo <span class="text-gradient">Aung</span>
@@ -273,27 +277,33 @@
             </div>
             <div class="polaroid-caption">
               <h2 class="profile-card-name">Thoon Phyo Aung</h2>
-              <p class="profile-card-role">Web &amp; IoT Developer • Myanmar</p>
+              <p class="profile-card-role">
+                Full-Stack Developer &amp; IoT Enthusiast • Myanmar
+              </p>
             </div>
           </aside>
 
           <div class="about-story">
             <h2 class="section-title">About Me</h2>
             <p>
-              You can call me <strong>Rane</strong> — a self-taught web
-              developer from Myanmar who loves building meaningful software and
-              never stops learning. Since 2021, I've enjoyed turning curiosity
-              into real projects.
+              You can call me <strong>Rane</strong> — a self-taught developer
+              from Myanmar with hands-on experience in both web development and
+              embedded/IoT systems. Since 2021, I have enjoyed turning curiosity
+              into practical software and hardware projects.
             </p>
             <p>
-              My main focus is full-stack web development with HTML, CSS,
-              JavaScript, React, and Python/Django. On the side, I'm an IoT
-              enthusiast who loves tinkering with ESP32 and Arduino hardware.
+              On the web side, I build applications with HTML, CSS, JavaScript,
+              React, Tailwind CSS, and Python/Django. In hardware and IoT, I
+              work with ESP32 and Arduino boards, sensors, motor control, and
+              MQTT cloud integration.
             </p>
             <p>
-              I also built <strong>MakerHub MM</strong> to help young learners
-              in Myanmar explore coding and electronics—because for me,
-              learning, building, and sharing never stop.
+              I built <strong>MakerHub MM</strong> to help young learners in
+              Myanmar explore coding and electronics, and I am currently
+              rebuilding it in React with Tailwind CSS. Alongside my current
+              projects, I am expanding my learning into Node.js, Next.js, DevOps
+              basics, real-workplace collaboration workflows, and agentic
+              coding.
             </p>
 
             <!-- Social Icon Row under About Me (like sister's layout) -->
@@ -331,7 +341,7 @@
               </a>
 
               <a
-                href="mailto:thoonphyoaung.dev@gmail.com"
+                href="mailto:thoonphyo141@gmail.com"
                 class="social-icon-btn"
                 aria-label="Send email"
                 title="Email"
@@ -405,10 +415,14 @@
     </section>
 
     <!-- 4. WHAT I DO (3 Horizontal Tinted Strips) -->
-    <section id="what-i-do" class="section section-alt">
+    <section
+      id="what-i-do"
+      class="section section-alt"
+      aria-labelledby="what-i-do-heading"
+    >
       <div class="container">
         <div class="section-header centered">
-          <h2 class="section-title">What I Do</h2>
+          <h2 id="what-i-do-heading" class="section-title">What I Do</h2>
         </div>
 
         <div class="pillars-stack">
@@ -417,6 +431,7 @@
             <div class="pillar-header">
               <span class="pillar-icon" aria-hidden="true">
                 <svg
+                  aria-hidden="true"
                   viewBox="0 0 24 24"
                   width="22"
                   height="22"
@@ -436,8 +451,8 @@
               <h3>Full-Stack Web Applications</h3>
             </div>
             <p>
-              Building responsive web interfaces, session-based retail POS
-              dashboards, REST API integrations, and Django ORM CRUD backends.
+              Building responsive React and Django web applications, retail POS
+              dashboards, REST API integrations, and clean CRUD backends.
             </p>
           </article>
 
@@ -446,6 +461,7 @@
             <div class="pillar-header">
               <span class="pillar-icon" aria-hidden="true">
                 <svg
+                  aria-hidden="true"
                   viewBox="0 0 24 24"
                   width="22"
                   height="22"
@@ -471,8 +487,8 @@
             </div>
             <p>
               Programming ESP32, ESP32-S3, and Arduino microcontrollers with
-              ultrasonic/water sensors, AC relay protection, physical overrides,
-              and MQTT cloud dashboards.
+              water-level sensors, relay protection, physical overrides, and
+              MQTT cloud dashboards.
             </p>
           </article>
 
@@ -481,6 +497,7 @@
             <div class="pillar-header">
               <span class="pillar-icon" aria-hidden="true">
                 <svg
+                  aria-hidden="true"
                   viewBox="0 0 24 24"
                   width="22"
                   height="22"
@@ -498,9 +515,9 @@
               <h3>Hardware Diagnostics &amp; Learning Platforms</h3>
             </div>
             <p>
-              Applying circuit theory, soldering, and multimeter testing—plus
-              building MakerHub MM to help Myanmar learners explore electronics
-              and IoT.
+              Hands-on soldering, multimeter circuit testing, basic PCB design,
+              and hardware troubleshooting alongside building MakerHub MM for
+              electronics and IoT learners.
             </p>
           </article>
         </div>
@@ -551,9 +568,12 @@
         </div>
 
         <!-- Live Count -->
-        <p id="projects-count" class="projects-count" aria-live="polite" hidden>
-          Loading projects...
-        </p>
+        <p
+          id="projects-count"
+          class="projects-count"
+          aria-live="polite"
+          hidden
+        ></p>
 
         <!-- Carousel: [ < ]  [ Cards ]  [ > ] -->
         <div class="projects-carousel">
@@ -605,7 +625,7 @@
           </button>
         </div>
 
-        <!-- Empty State (Project မရှိရင် JS က ဖော်ပေးမယ်) -->
+        <!-- Empty State -->
         <p id="projects-empty" class="projects-empty" hidden>
           No projects found in this category.
         </p>
@@ -767,12 +787,12 @@
       </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== PART 7: FOOTER ==================== -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-copy">
-          &copy; <span id="footer-year">2026</span> Thoon Phyo Aung. Built with
-          pure HTML, CSS &amp; Vanilla JavaScript.
+          © <span id="footer-year">2026</span> Thoon Phyo Aung. All rights
+          reserved.
         </p>
         <a href="#top" class="footer-top-link">Back to top ↑</a>
       </div>
