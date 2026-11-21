@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // this enables strict mode in JavaScript, which helps catch common coding mistakes and "unsafe" actions (like using undeclared variables).
 
 const THEME_STORAGE_KEY = "ranejipsy-portfolio-theme";
 
@@ -115,59 +115,6 @@ function initMobileNavigation() {
 }
 
 /* ==================== PART 3: TECHNICAL SKILLS ==================== */
-function initSkillTabs() {
-  const nav = document.getElementById("skills-nav");
-  const tabs = document.querySelectorAll(".skill-tab-btn");
-
-  if (!nav || !tabs.length) return;
-
-  function activateTab(selectedTab) {
-    const selectedCategory = selectedTab.dataset.skillTab;
-    const tiles = document.querySelectorAll(".skill-tile");
-
-    // 1. Pill highlight နဲ့ aria-selected ကို ပြောင်းမယ်
-    tabs.forEach((tab) => {
-      const isSelected = tab === selectedTab;
-      tab.classList.toggle("is-active", isSelected);
-      tab.setAttribute("aria-selected", String(isSelected));
-    });
-
-    // 2. Step 2 မှာ .skill-tile တွေ ထည့်ပြီးရင် Category အလိုက် Filter လုပ်မယ်
-    tiles.forEach((tile) => {
-      const matches =
-        selectedCategory === "all" ||
-        tile.dataset.category === selectedCategory;
-      tile.hidden = !matches;
-    });
-  }
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      activateTab(tab);
-    });
-  });
-
-  // Keyboard Left / Right Arrow keys နဲ့ Tab ပြောင်းနိုင်ဖို့
-  nav.addEventListener("keydown", (event) => {
-    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
-
-    const tabArray = Array.from(tabs);
-    const currentIndex = tabArray.indexOf(document.activeElement);
-    if (currentIndex === -1) return;
-
-    event.preventDefault();
-    const direction = event.key === "ArrowRight" ? 1 : -1;
-    const nextIndex =
-      (currentIndex + direction + tabArray.length) % tabArray.length;
-    const nextTab = tabArray[nextIndex];
-
-    nextTab.focus();
-    activateTab(nextTab);
-  });
-}
-
-/* ==================== PART 3: TECHNICAL SKILLS ==================== */
-
 const skillsData = [
   // --- 1. Web dev ---
   {
@@ -464,7 +411,7 @@ const projects = [
       "Industrial safety motor controller for high-power AC submersible pumps featuring dry-run protection and remote relay control.",
     tech: ["ESP32", "Arduino C++", "Relay Module"],
     live: null,
-    github: "https://github.com/ThoonPhyo/Arduino-Smart-Motor-Control-V-2",
+    github: "https://github.com/ThoonPhyoAung/Arduino-Smart-Motor-Control-V-2",
   },
 ];
 
@@ -770,12 +717,6 @@ function initContactForm() {
   updateCount();
 }
 
-// ==================== Footer ====================
-const footerYear = document.getElementById("footer-year");
-if (footerYear) {
-  footerYear.textContent = new Date().getFullYear();
-}
-
 /* ==================== Pointer effect ==================== */
 function initPointerBubbles() {
   const layer = document.getElementById("pointer-fx-layer");
@@ -824,4 +765,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initProjectCarousel();
   initContactForm();
   initPointerBubbles();
+
+  const footerYear = document.getElementById("footer-year");
+  if (footerYear) {
+    footerYear.textContent = String(new Date().getFullYear());
+  }
 });

@@ -100,11 +100,6 @@
 }
 
 /* ================= CUSTOM SCROLLBAR (Desktop) ================= */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--border-color) var(--bg-page);
-}
-
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -134,6 +129,8 @@ html {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-page);
 }
 
 body {
@@ -251,7 +248,6 @@ a {
 }
 
 /* ================= FLOATING GLASS PILL NAVBAR ================= */
-
 .site-header {
   position: fixed;
   top: 1rem;
@@ -260,6 +256,7 @@ a {
   z-index: 100;
   pointer-events: none;
 }
+
 .nav-pill,
 .mobile-nav {
   pointer-events: auto;
@@ -386,6 +383,7 @@ a {
 .menu-btn {
   font-size: 1.05rem;
 }
+
 .mobile-nav {
   margin-top: 0.55rem;
   border-radius: 1.25rem;
@@ -473,7 +471,7 @@ a {
     var(--accent-soft) 0%,
     transparent 60%
   );
-  overflow-x: clip; /* Prevents horizontal scroll on small screens */
+  overflow-x: clip;
 }
 
 .hero-grid {
@@ -512,8 +510,8 @@ a {
     var(--accent-bright),
     var(--mint)
   );
-  -webkit-background-clip: text; /* For Safari means iOS */
-  background-clip: text; /* For other browsers , text will be clipped */
+  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -643,7 +641,6 @@ a {
   transform: scale(1.05);
 }
 
-/* Step 6 (Floating Live): Add animation to .floating-badge */
 .floating-badge {
   position: absolute;
   z-index: 2;
@@ -714,16 +711,15 @@ a {
   animation-delay: 2.4s;
 }
 
-/* to remove animation */
 @media (prefers-reduced-motion: reduce) {
   .avatar-pulse,
-  .floating-badge {
+  .floating-badge,
+  .fx-particle {
     animation: none;
   }
 }
 
 /* ================= ABOUT ME SECTION ================= */
-/* Step 1: Mobile-First Split Layout */
 .about-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -731,7 +727,6 @@ a {
   align-items: center;
 }
 
-/* Step 2: Polaroid Photo Card */
 .polaroid-card {
   max-width: 340px;
   width: 100%;
@@ -768,12 +763,10 @@ a {
   color: var(--text-muted);
 }
 
-/* Step 3: About Story Text */
 .about-story p {
   color: var(--text-muted);
 }
 
-/* Step 4: Social Icon Buttons */
 .about-socials {
   display: flex;
   flex-wrap: wrap;
@@ -810,7 +803,6 @@ a {
 }
 
 /* ==================== PART 3: TECHNICAL SKILLS ==================== */
-/* Step 1: Category Tabs (Borderless, Project-nav style wrapping) */
 .skills-nav-wrap {
   width: 100%;
   margin-bottom: 2.25rem;
@@ -892,7 +884,6 @@ a {
   }
 }
 
-/* ================= TECHNICAL SKILLS (Compact 4-Column Grid & Cards) ================= */
 .skills-compact-grid {
   list-style: none;
   padding: 0;
@@ -953,11 +944,19 @@ a {
   flex-shrink: 0;
 }
 
+.skill-icon-wrap svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  flex-shrink: 0;
+}
+
 .skill-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.55rem;
   min-width: 0;
   flex: 1;
 }
@@ -1013,31 +1012,6 @@ a {
   background: linear-gradient(90deg, var(--accent), var(--mint));
   border-radius: 9999px;
   transition: width 0.6s ease;
-}
-.skill-icon-wrap svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: block;
-  flex-shrink: 0;
-}
-.skill-info {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.55rem;
-  min-width: 0;
-  flex: 1;
-}
-
-.skill-badge {
-  font-size: 0.68rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 0.22rem 0.45rem;
-  border-radius: 9999px;
-  color: var(--accent-bright);
-  background-color: var(--accent-soft);
-  border: 1px solid color-mix(in srgb, var(--accent-bright) 35%, transparent);
 }
 
 .skill-tile[data-learning="true"] {
@@ -1103,9 +1077,9 @@ a {
 .pillar-strip p {
   font-size: 0.96rem;
   line-height: 1.65;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin: 0;
-  padding-left: 3.35rem; /* Icon အောက်တည့်တည့် စာသားညီစေရန် */
+  padding-left: 3.35rem;
 }
 
 /* --- Tinted Color Variants (Light Mode) --- */
@@ -1177,8 +1151,6 @@ a {
 }
 
 /* ==================== PART 5: PROJECTS ==================== */
-
-/* 1. Filter Controls & Live Count */
 .project-filters {
   display: flex;
   justify-content: center;
@@ -1204,7 +1176,6 @@ a {
     transform 0.15s ease;
 }
 
-/* only hover effect for desktop , not for mobile */
 @media (hover: hover) and (pointer: fine) {
   .filter-btn:hover {
     color: var(--text-primary);
@@ -1231,7 +1202,6 @@ a {
   color: var(--text-muted);
 }
 
-/* 2. Carousel Wrapper, Prev/Next Buttons & Empty State */
 .projects-carousel {
   display: flex;
   align-items: center;
@@ -1290,14 +1260,11 @@ a {
   display: none;
 }
 
-/* 3. Projects Grid (Scroll-Snap Carousel) & Card Shell */
-
 .projects-grid {
   flex: 1;
   min-width: 0;
   display: flex;
   gap: 1.5rem;
-  /* Hover shadow အပေါ်၊ ဘေး၊ အောက် ပြတ်မကျစေရန် padding ကျယ်ကျယ်ပေးပါ */
   padding: 1.75rem 1.25rem 2.25rem;
   margin: -1.75rem -1.25rem -2.25rem;
   scroll-padding-inline: 1.1rem;
@@ -1346,8 +1313,6 @@ a {
     flex: 0 0 calc((100% - 3rem) / 3);
   }
 }
-
-/* 4. Project Card Content, Tech Tags & Footer */
 
 .project-banner {
   position: relative;
@@ -1441,6 +1406,7 @@ a {
   border: 1px solid var(--highlight-border);
   border-radius: 999px;
 }
+
 .project-footer {
   margin-top: auto;
   padding-top: 0.65rem;
@@ -1533,7 +1499,6 @@ a {
   color: var(--accent);
 }
 
-/* send message form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -1619,6 +1584,7 @@ a {
   background-color: var(--success-bg);
   border: 1px solid var(--success-border);
 }
+
 /* ==================== FOOTER ==================== */
 .site-footer {
   padding: 1.5rem 0;
@@ -1715,8 +1681,6 @@ a {
 }
 
 /* ================= MEDIA QUERIES ================= */
-
-/* Part 1 Responsive Nav Rule */
 @media (min-width: 768px) {
   .desktop-nav {
     display: block;
@@ -1728,7 +1692,6 @@ a {
   }
 }
 
-/* Part 2 Responsive Layout (Tablet & Desktop) */
 @media (min-width: 640px) {
   .badge-side {
     display: inline-flex;
